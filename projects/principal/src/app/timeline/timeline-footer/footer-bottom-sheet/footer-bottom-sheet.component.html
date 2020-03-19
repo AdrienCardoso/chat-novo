@@ -1,0 +1,47 @@
+<img class="imagem" [src]="croppedImage" />
+
+<div class="cropper-container">
+  <image-cropper
+    *ngIf="imageChangedEvent"
+    mat-card-image
+    [imageChangedEvent]="imageChangedEvent"
+    [maintainAspectRatio]="false"
+    [imageQuality]="30"
+    format="jpeg"
+    (imageCropped)="imageCropped($event)"
+    (imageLoaded)="imageLoaded()"
+    (cropperReady)="cropperReady()"
+    (loadImageFailed)="loadImageFailed()"
+  ></image-cropper>
+</div>
+
+<div>
+  <textarea class="texto" (keyup)="textareaKeyUp($event)"></textarea>
+</div>
+<div class="acoes-container">
+  <button mat-icon-button>
+    <mat-icon aria-hidden="false" (click)="dismiss()" class="icons"
+      >cancel</mat-icon
+    >
+  </button>
+
+  <button mat-fab color="accent" *ngIf="mostrarImagem" (click)="file.click()">
+    <mat-icon aria-hidden="false" aria-label="Abrir a cãmera"
+      >camera_alt</mat-icon
+    >
+  </button>
+
+  <button mat-icon-button (click)="recortar()">
+    <mat-icon aria-hidden="false" class="icons" aria-label="Abrir a cãmera"
+      >send</mat-icon
+    >
+  </button>
+</div>
+
+<input
+  type="file"
+  capture="camera"
+  (change)="fileChangeEvent($event)"
+  accept="image/*"
+  #file
+/>
