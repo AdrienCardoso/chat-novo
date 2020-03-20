@@ -50,3 +50,4 @@ projects/principal/src/environments/firebase.config.ts
 functions/package-lock.json
 !.firebase/
 package-lock.json
+.vscode/settings.json

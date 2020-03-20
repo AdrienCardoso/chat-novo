@@ -1,4 +1,4 @@
-<div *ngIf="timeLineService.admin.timeline">
+<div class="timeline-view" *ngIf="timeLineService.admin.timeline">
 <div id="navbar" class="navbar topo" *ngIf="user">
   <span><img *ngIf="user"
     class="avatar"
@@ -16,7 +16,6 @@
     [mostrarFavoritos]="timeLineService.admin.favoritos"
   ></app-timeline-mensagem>
 </div>
- 
 <app-timeline-footer
   *ngIf="timeLineService.admin.formHabilitado"
 ></app-timeline-footer>

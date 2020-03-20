@@ -1,23 +1,31 @@
+.timeline-view {
+  display: flex;
+  justify-content: center;
+   position: relative;
+}
 .timeline-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: auto;
-    width: 100%;
-    overflow: scroll;
-     margin-bottom: 34px;
-     background-color: grayscale($color: #292929) !important;
+    width: 95%;
+    overflow-x: scroll;
+     margin-bottom: 55px;
+     background-color: grayscale($color: #2e2e2e)!important;
+     margin-top: 55px;
+   
 }
 
 .topo {
-    width: 100%;
+   
     display: flex;
     justify-content:space-between;
     align-items: center;
     background-color: grayscale($color: #2e2e2e)!important;
     position: fixed;  
     top: 0; 
-    width: 100%;  
+    width: 95%;  
+   max-width: 95%;
     transition: top 0.3s;
     z-index: 100;
 }

@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { AuthenticationService } from '../../shared/services/firebase/authentication/authentication.service';
-import * as firebase from 'firebase';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { Injectable } from "@angular/core";
+import { AuthenticationService } from "../../shared/services/firebase/authentication/authentication.service";
+import * as firebase from "firebase";
+import { AngularFireDatabase } from "@angular/fire/database";
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class LoginService {
   constructor(
@@ -36,7 +36,7 @@ export class LoginService {
   ): Promise<boolean> {
     try {
       await this.db.database
-        .ref('usuarios')
+        .ref("usuarios")
         .child(credentials.user.uid)
         .set(credentials.additionalUserInfo);
       return true;

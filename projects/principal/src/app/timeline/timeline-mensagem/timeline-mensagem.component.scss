@@ -22,7 +22,7 @@
 }
 
 .nome {
-  font-size: small;
+  font-weight: bold;
   margin: 0px;
   margin-left: 10px;
   font-weight: bold;
@@ -35,8 +35,9 @@
   margin: 10px;
   margin-bottom: 5px;
   overflow-x: scroll;
-  font-size: small;
+ // font-size: small;
   background-color: grayscale($color: #292929) !important;
+   
 }
 
 .imagem-container {
