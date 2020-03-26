@@ -70,6 +70,20 @@
   width: 28px;
 }
 
+.virar-container {
+  display: flex;
+  justify-content: center;
+}
+
+ 
+
+ 
+.icon-virar {
+  font-size: 18px;
+  width: 18px;
+}
+
+
 ::ng-deep .mat-form-field {
     .mat-input-element {
       background-color: grayscale($color: #353535);

@@ -9,6 +9,7 @@ import 'moment/locale/pt-br';
 export class TimelineMensagemComponent implements OnInit {
   @Input() mensagem: any;
   @Input() mostrarFavoritos: boolean;
+  @Input() currentUser: any;
   constructor() {}
 
   ngOnInit(): void {}

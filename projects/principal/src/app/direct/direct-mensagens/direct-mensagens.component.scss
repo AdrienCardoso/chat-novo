@@ -1,0 +1,37 @@
+.direct-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: auto;
+    width: 95%;
+    overflow-x: scroll;
+    margin-bottom: 55px;
+    background-color: grayscale($color: #2e2e2e) !important;
+    margin-top: 10px;
+  }
+  
+  .topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: grayscale($color: #2e2e2e) !important;
+    position: fixed;
+    top: 0;
+    width: 95%;
+    max-width: 95%;
+    transition: top 0.3s;
+    z-index: 100;
+  }
+  
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  
+  .titulo {
+    color: gray;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,15 @@
+.mensagem-container-user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mensagem-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mensagem {
+    border-radius: 5px;
+    background-color: grayscale($color: #292929) !important;
+    color: whitesmoke!important;
+}

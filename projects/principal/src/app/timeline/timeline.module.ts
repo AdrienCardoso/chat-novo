@@ -8,6 +8,7 @@ import { FooterBottomSheetComponent } from './timeline-footer/footer-bottom-shee
 import { MaterialModule } from '../material-module';
 import { ImageCropperModule } from 'ngx-image-cropper';
 import { MomentModule } from 'ngx-moment';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,6 @@ import { MomentModule } from 'ngx-moment';
     TimelineFooterComponent,
     FooterBottomSheetComponent
   ],
-  imports: [CommonModule, MaterialModule, ImageCropperModule, MomentModule]
+  imports: [CommonModule, MaterialModule, ImageCropperModule, MomentModule, RouterModule]
 })
 export class TimelineModule {}

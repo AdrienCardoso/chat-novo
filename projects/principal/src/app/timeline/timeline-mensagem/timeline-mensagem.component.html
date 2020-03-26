@@ -1,7 +1,9 @@
 <div class="mensagem-container">
   <div class="topo-container">
     <img class="avatar" src="{{ mensagem.avatar }}" />
-    <div class="nome">{{ mensagem.nome }}</div>
+    <!-- <a *ngIf="mensagem.uid!==currentUser.uid" [routerLink]="['/direct/'+ mensagem.uid]" class="nome">{{ mensagem.nome }}</a>
+    <div *ngIf="mensagem.uid === currentUser.uid" class="nome">{{ mensagem.nome }}</div> -->
+    <div  class="nome">{{ mensagem.nome }}</div>  
   </div>
 
   <div class="imagem-container" *ngIf="mensagem.imagem">

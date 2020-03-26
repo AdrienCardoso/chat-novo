@@ -23,6 +23,7 @@ export class TimelineFooterComponent implements OnInit {
       .subscribe({
         next: data => {
           if (data) {
+            console.log(data);
             this.adicionarImagem(data);
           }
         }

@@ -16,14 +16,20 @@ export class FooterBottomSheetComponent implements OnInit {
   texto = '';
   nome = '';
   mostrarImagem = true;
+  posicao = 4;
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA) public data: any,
     private bottomSheetRef: MatBottomSheetRef<FooterBottomSheetComponent>
   ) {
-   this.mostrarImagem = data.imagem;
+    this.mostrarImagem = data.imagem;
   }
 
-  fileChangeEvent(event: any): void {
+  virar() {
+    this.posicao = this.posicao - 1;
+    this.posicao = this.posicao < 0 ? 3 : this.posicao;
+  }
+
+  fileChangeEvent(event): void {
     this.nome = event.target.files[0].name;
     this.imageChangedEvent = event;
   }
@@ -31,24 +37,24 @@ export class FooterBottomSheetComponent implements OnInit {
     this.croppedImage = event.base64;
   }
   imageLoaded() {
-    // show cropper
+    console.log('image loaded');
   }
   cropperReady() {
-    // cropper ready
+    console.log('cropper ready');
   }
   loadImageFailed() {
-    // show message
+    console.log('image load failed');
   }
 
   recortar() {
     this.bottomSheetRef.dismiss({
-      imagem: this.croppedImage.base64,
+      imagem: this.croppedImage,
       texto: this.texto,
       nome: this.nome
     });
   }
 
-  textareaKeyUp(textAreaEvent) {
+  textoKeyUp(textAreaEvent: any) {
     this.texto = textAreaEvent.target.value;
   }
 

@@ -1,0 +1,13 @@
+<div id="navbar" class="navbar topo" *ngIf="convidado">
+    <span><img *ngIf="convidado" class="avatar" src="{{ convidado?.imagem }}"/></span>
+    <span class="titulo">{{ convidado?.nome }}</span>
+    <button mat-icon-button (click)="voltar()" name="sair">
+      <mat-icon class="mat-icon">exit_to_app</mat-icon>
+    </button>
+  </div>
+<div class="direct-container">
+
+    <!-- <app-direct-mensagem  *ngFor="let item of mensagens | async"
+    [mensagem]="item"></app-direct-mensagem> -->
+    <app-direct-mensagem  *ngFor="let item of mensagens | async"  ></app-direct-mensagem>
+</div>

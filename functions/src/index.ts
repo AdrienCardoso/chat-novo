@@ -1,5 +1,8 @@
 import * as functions from "firebase-functions";
 import * as admin from "firebase-admin";
+import * as cors from "cors";
+
+const corsHandler = cors({ origin: true });
 
 admin.initializeApp(functions.config().firebase);
 
@@ -102,3 +105,17 @@ function adicionarMensagem(mensagem: any) {
     .ref("mensagens")
     .push(mensagem);
 }
+
+export const obterUserInfo = functions.https.onRequest(
+  async (request, response) => {
+    corsHandler(request, response, async () => {
+      const uid = request.query.uid;
+      const user = await admin.auth().getUser(uid);
+      response.send({
+        imagem: user.photoURL,
+        nome: user.displayName,
+        email: user.email
+      });
+    });
+  }
+);

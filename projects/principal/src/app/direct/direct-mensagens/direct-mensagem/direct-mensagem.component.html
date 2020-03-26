@@ -1,0 +1,22 @@
+
+<div class="{{mensagem.uid === currentUser.uid? 'mensagem-container-user':'mensagem-container'}}">
+  <div class="mensagem">
+    <div class="texto" *ngIf="mensagem.texto">
+      {{ mensagem.texto }}
+    </div>
+    <div class="imagem-container" *ngIf="mensagem.imagem">
+      <img class="imagem-mensagem" src="{{ mensagem.imagem }}" />
+    </div>
+    <!-- <div class="rodape-container">
+    <div>
+      <app-mensagem-favorito
+        *ngIf="mostrarFavoritos"
+        [mensagemId]="mensagem.id"
+      ></app-mensagem-favorito>
+    </div>
+    <div>
+      <small class="horario">{{ mensagem.time | amTimeAgo: true }}</small>
+    </div>
+  </div> -->
+  </div>
+</div>

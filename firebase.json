@@ -14,6 +14,10 @@
     ],
     "rewrites": [
       {
+        "source": "/obterUserInfo",
+        "function": "obterUserInfo"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }

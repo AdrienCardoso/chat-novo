@@ -6,13 +6,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TimelineModule } from './timeline/timeline.module';
 import { MaterialModule } from './material-module';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FirebaseConfig } from '../environments/firebase.config';
+
 import { MomentModule } from 'ngx-moment';
+import { DirectModule } from './direct/direct.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +24,7 @@ import { MomentModule } from 'ngx-moment';
     AppRoutingModule,
     BrowserAnimationsModule,
     TimelineModule,
+    DirectModule,
     MaterialModule,
     AngularFireModule.initializeApp(FirebaseConfig),
     AngularFireAuthModule,

@@ -12,11 +12,18 @@
     (imageLoaded)="imageLoaded()"
     (cropperReady)="cropperReady()"
     (loadImageFailed)="loadImageFailed()"
+    [canvasRotation]="posicao"
   ></image-cropper>
 </div>
-
+<div class="virar-container"   *ngIf="imageChangedEvent">
+  <button mat-icon-button (click)="virar()">
+    <mat-icon aria-hidden="false" class="icon-virar" 
+      >replay</mat-icon
+    >
+  </button>
+</div>
 <div>
-  <textarea class="texto" (keyup)="textareaKeyUp($event)"></textarea>
+  <textarea class="texto" (keyup)="textoKeyUp($event)"></textarea>
 </div>
 <div class="acoes-container">
   <button mat-icon-button>
